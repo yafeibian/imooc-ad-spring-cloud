@@ -12,7 +12,7 @@ import java.util.List;
 @FeignClient(value = "eureka-client-ad-sponsor",
     fallback = SponsorClientHystrix.class )
 public interface SponsorClient {
-    @RequestMapping(value = "ad-sponsor/get/adplan",
+    @RequestMapping(value = "/ad-sponsor/get/adplan",
         method = RequestMethod.POST)
     CommonResponse<List<AdPlan>> getAdPlans(@RequestBody AdPlanGetRequest request);
 
